@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered SIRcode 2015.02.23 19-54-51-432">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="cryptage" name="permute" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="perm2" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="perm2" visibility="public" returnType="char[]" isStatic="true">
+          <Argument type="char[]" name="a"/>
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="swap" visibility="private" returnType="void" isStatic="true">
+          <Argument type="char[]" name="a"/>
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="j"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="cryptage" name="Cesar" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="alphabet1" visibility="package" type="char[]" isStatic="true"/>
+      </Fields>
+      <Methods>
+        <Method name="crypt" visibility="public" returnType="String" isStatic="true">
+          <Argument type="int" name="n"/>
+          <Argument type="String" name="sIn"/>
+        </Method>
+        <Method name="decrypt" visibility="public" returnType="String" isStatic="true">
+          <Argument type="int" name="n"/>
+          <Argument type="String" name="sIn"/>
+        </Method>
+        <Method name="posChar" visibility="private" returnType="int" isStatic="true">
+          <Argument type="char" name="c"/>
+          <Argument type="char[]" name="tab"/>
+        </Method>
+        <Method name="newPos" visibility="private" returnType="int" isStatic="true">
+          <Argument type="int" name="pos"/>
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="abs" visibility="public" returnType="int" isStatic="true">
+          <Argument type="int" name="a"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="cryptage" name="librairie" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="q" visibility="private" type="String"/>
+      </Fields>
+      <Methods/>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="cryptage" name="Permutation" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="k" visibility="package" type="int" isStatic="true"/>
+      </Fields>
+      <Methods>
+        <Method name="perm1" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="perm1" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="prefix"/>
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="patient" name="main" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="420.0" package="patient" name="PatientSir" visibility="public">
+      <Constructors>
+        <Constructor name="PatientSir" visibility="public">
+          <Argument type="String" name="famillyName"/>
+          <Argument type="String" name="firstName"/>
+        </Constructor>
+        <Constructor name="PatientSir" visibility="public">
+          <Argument type="Integer" name="Id"/>
+          <Argument type="String" name="famillyName"/>
+          <Argument type="char" name="patClass"/>
+          <Argument type="Date" name="birth"/>
+          <Argument type="char" name="sex"/>
+          <Argument type="String" name="firstName"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="id" visibility="private" type="Integer"/>
+        <Field name="patClass" visibility="private" type="char"/>
+        <Field name="famillyName" visibility="private" type="String"/>
+        <Field name="firstName" visibility="private" type="String"/>
+        <Field name="idSIR" visibility="private" type="int"/>
+        <Field name="birth" visibility="private" type="Date"/>
+        <Field name="sex" visibility="private" type="char"/>
+      </Fields>
+      <Methods>
+        <Method name="getId" visibility="public" returnType="Integer"/>
+        <Method name="setId" visibility="public" returnType="void">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="getPatClass" visibility="public" returnType="char"/>
+        <Method name="setPatClass" visibility="public" returnType="void">
+          <Argument type="char" name="patClass"/>
+        </Method>
+        <Method name="getFamillyName" visibility="public" returnType="String"/>
+        <Method name="setFamillyName" visibility="public" returnType="void">
+          <Argument type="String" name="famillyName"/>
+        </Method>
+        <Method name="getFirstName" visibility="public" returnType="String"/>
+        <Method name="setFirstName" visibility="public" returnType="void">
+          <Argument type="String" name="firstName"/>
+        </Method>
+        <Method name="getIdSIR" visibility="public" returnType="int"/>
+        <Method name="setIdSIR" visibility="public" returnType="void">
+          <Argument type="int" name="idSIR"/>
+        </Method>
+        <Method name="getBirth" visibility="public" returnType="Date"/>
+        <Method name="setBirth" visibility="public" returnType="void">
+          <Argument type="Date" name="birth"/>
+        </Method>
+        <Method name="getSex" visibility="public" returnType="char"/>
+        <Method name="setSex" visibility="public" returnType="void">
+          <Argument type="char" name="sex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="420.0" package="patient" name="DateDeNaissance" visibility="public">
+      <Constructors>
+        <Constructor name="DateDeNaissance" visibility="public">
+          <Argument type="int" name="annee"/>
+          <Argument type="int" name="mois"/>
+          <Argument type="int" name="jours"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="annee" visibility="private" type="int"/>
+        <Field name="mois" visibility="private" type="int"/>
+        <Field name="jours" visibility="private" type="int"/>
+      </Fields>
+      <Methods>
+        <Method name="toString" visibility="public" returnType="String"/>
+        <Method name="getAnnee" visibility="public" returnType="int"/>
+        <Method name="setAnnee" visibility="public" returnType="void">
+          <Argument type="int" name="annee"/>
+        </Method>
+        <Method name="getMois" visibility="public" returnType="int"/>
+        <Method name="setMois" visibility="public" returnType="void">
+          <Argument type="int" name="mois"/>
+        </Method>
+        <Method name="getJours" visibility="public" returnType="int"/>
+        <Method name="setJours" visibility="public" returnType="void">
+          <Argument type="int" name="jours"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="420.0" package="patient" name="Examen" visibility="public">
+      <Constructors>
+        <Constructor name="Examen" visibility="public">
+          <Argument type="Date" name="dateExam"/>
+          <Argument type="String" name="nomPH"/>
+          <Argument type="Enum" name="typeExam"/>
+          <Argument type="String" name="compteRendu"/>
+          <Argument type="int" name="numArchive"/>
+        </Constructor>
+        <Constructor name="Examen" visibility="public">
+          <Argument type="String" name="nomPH"/>
+          <Argument type="String" name="compteRendu"/>
+          <Argument type="int" name="numArchive"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="dateExam" visibility="private" type="Date"/>
+        <Field name="nomPH" visibility="private" type="String"/>
+        <Field name="typeExam" visibility="private" type="Enum"/>
+        <Field name="compteRendu" visibility="private" type="String"/>
+        <Field name="numArchive" visibility="private" type="int"/>
+        <Field name="papier" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getDateExam" visibility="public" returnType="Date"/>
+        <Method name="setDateExam" visibility="public" returnType="void">
+          <Argument type="Date" name="dateExam"/>
+        </Method>
+        <Method name="getNomPH" visibility="public" returnType="String"/>
+        <Method name="setNomPH" visibility="public" returnType="void">
+          <Argument type="String" name="nomPH"/>
+        </Method>
+        <Method name="getTypeExam" visibility="public" returnType="Enum"/>
+        <Method name="setTypeExam" visibility="public" returnType="void">
+          <Argument type="Enum" name="typeExam"/>
+        </Method>
+        <Method name="getCompteRendu" visibility="public" returnType="String"/>
+        <Method name="setCompteRendu" visibility="public" returnType="void">
+          <Argument type="String" name="compteRendu"/>
+        </Method>
+        <Method name="getNumArchive" visibility="public" returnType="int"/>
+        <Method name="setNumArchive" visibility="public" returnType="void">
+          <Argument type="int" name="numArchive"/>
+        </Method>
+        <Method name="getPapier" visibility="public" returnType="String"/>
+        <Method name="setPapier" visibility="public" returnType="void">
+          <Argument type="String" name="papier"/>
+        </Method>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="820.0" package="patient" name="DMR" visibility="public">
+      <Constructors>
+        <Constructor name="DMR" visibility="public">
+          <Argument type="PatientSir" name="patient"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="examens" visibility="private" type="ArrayList&lt;Examen&gt;"/>
+        <Field name="patient" visibility="private" type="PatientSir"/>
+      </Fields>
+      <Methods>
+        <Method name="getExamens" visibility="public" returnType="ArrayList&lt;Examen&gt;"/>
+        <Method name="setExamens" visibility="public" returnType="void">
+          <Argument type="ArrayList&lt;Examen&gt;" name="examens"/>
+        </Method>
+        <Method name="ajoutExamens" visibility="public" returnType="void">
+          <Argument type="Examen" name="e"/>
+        </Method>
+        <Method name="getPatient" visibility="public" returnType="PatientSir"/>
+        <Method name="setPatient" visibility="public" returnType="void">
+          <Argument type="PatientSir" name="patient"/>
+        </Method>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="820.0" package="CHU" name="personnel" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="login" visibility="private" type="String"/>
+        <Field name="mdp" visibility="private" type="String"/>
+        <Field name="nom" visibility="private" type="String"/>
+        <Field name="prenom" visibility="private" type="String"/>
+        <Field name="status" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getLogin" visibility="public" returnType="String"/>
+        <Method name="setLogin" visibility="public" returnType="void">
+          <Argument type="String" name="login"/>
+        </Method>
+        <Method name="getMdp" visibility="public" returnType="String"/>
+        <Method name="setMdp" visibility="public" returnType="void">
+          <Argument type="String" name="mdp"/>
+        </Method>
+        <Method name="getNom" visibility="public" returnType="String"/>
+        <Method name="setNom" visibility="public" returnType="void">
+          <Argument type="String" name="nom"/>
+        </Method>
+        <Method name="getPrenom" visibility="public" returnType="String"/>
+        <Method name="setPrenom" visibility="public" returnType="void">
+          <Argument type="String" name="prenom"/>
+        </Method>
+        <Method name="getStatus" visibility="public" returnType="String"/>
+        <Method name="setStatus" visibility="public" returnType="void">
+          <Argument type="String" name="status"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="820.0" package="CHU" name="Radiologue" visibility="public">
+      <Constructors>
+        <Constructor name="Radiologue" visibility="public">
+          <Argument type="String" name="nom"/>
+          <Argument type="String" name="prenom"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="nom" visibility="private" type="String"/>
+        <Field name="prenom" visibility="private" type="String"/>
+        <Field name="id" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="getNom" visibility="public" returnType="String"/>
+        <Method name="setNom" visibility="public" returnType="void">
+          <Argument type="String" name="nom"/>
+        </Method>
+        <Method name="getPrenom" visibility="public" returnType="String"/>
+        <Method name="setPrenom" visibility="public" returnType="void">
+          <Argument type="String" name="prenom"/>
+        </Method>
+        <Method name="getId" visibility="public" returnType="String"/>
+        <Method name="setId" visibility="public" returnType="void">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="820.0" package="ComHL7" name="rHL7" visibility="public">
+      <Constructors>
+        <Constructor name="rHL7" visibility="public">
+          <Argument type="String" name="host"/>
+          <Argument type="int" name="port"/>
+          <Argument type="Patient" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Fields/>
+      <Methods/>
+    </Class>
+    <Class xPosition="20.0" yPosition="1220.0" package="baseDeDonnée" name="DB" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods/>
+    </Class>
+    <Class xPosition="320.0" yPosition="1220.0" package="baseDeDonnée" name="DBconnect" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="DMR" target="Examen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="DMR" target="PatientSir" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="patient" source="DMR" target="PatientSir" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="examens" source="DMR" target="Examen" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
